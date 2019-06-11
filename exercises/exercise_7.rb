@@ -10,5 +10,7 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
-
-
+new_name = gets.chomp
+new_store = Store.create(name: "#{new_name}")
+new_store.save!
+puts Store.count

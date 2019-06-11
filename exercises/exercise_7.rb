@@ -16,6 +16,9 @@ new_store.errors.full_messages.each do |i|
   puts i
   end
 
-# new_store = Store.create(name: "#{new_name}", annual_revenue: 2200000, mens_apparel: true, womens_apparel: true )
+new_person = @store1.employees.create(first_name: "#{new_name}", hourly_rate: 20)
+new_person.errors.full_messages.each do |i|
+  puts i
+end
 
-# new_store
+

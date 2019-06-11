@@ -5,7 +5,7 @@ class Store < ActiveRecord::Base
 
   def apparel_carrying 
     if mens_apparel == false && women_apparel == false
-      error.add(mens_apparel, "can't be blank")
+      error.add(:mens_apparel, "can't be blank")
     end
   end
 

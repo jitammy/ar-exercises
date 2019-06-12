@@ -5,4 +5,9 @@ class Employee < ActiveRecord::Base
   validates :hourly_rate, presence: true, numericality: { greater_than_or_equal_to: 40, less_than_or_equal_to: 200 }
   validates :store_id, presence: true
 
+  private
+  before_create do 
+    self.password = rand(100000000)
+  end
+
 end
